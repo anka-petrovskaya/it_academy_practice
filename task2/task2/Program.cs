@@ -6,29 +6,27 @@ namespace task2
     {
         static void Main(string[] args)
         {
-            int[] nums = { 32 };
-            char[] symbs = new char[] { 'A' };
-            string[] txts = new string[] { "Hello" };
+            Object[] objs = new object[3];
+            objs[0] = 32;
+            objs[1] = 'A';
+            objs[2] = "Hello";
 
-            Console.WriteLine("Massive nums:");
+            Console.WriteLine("Создан такой массив:");
 
-            for (int k=0; k<nums.Length; k++)
+            for (int k=0; k<objs.Length; k++)
             {
-                Console.Write(nums[k] + " ");
+                Console.WriteLine(k + ": " + objs[k]);
             }
-            Console.WriteLine("\nMassive symbs:");
 
-            for (int k = 0; k < symbs.Length; k++)
-            {
-                Console.Write(symbs[k] + " ");
-            }
-            Console.WriteLine("\nMassive txts:");
+            objs[0] = (int)objs[0] + 10;
+            objs[2] = "Hello, guys!";
 
-            for (int k = 0; k < txts.Length; k++)
+            Console.WriteLine("После присвоения новых значений:");
+
+            for (int k = 0; k < objs.Length; k++)
             {
-                Console.Write(txts[k] + " ");
+                Console.WriteLine(k + ": " + objs[k]);
             }
-            Console.WriteLine();
         }
     }
 }
